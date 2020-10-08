@@ -22,11 +22,9 @@ public class KafkaProducer {
 	private static final String CANCEL_ORDERS_TOPIC = "cancel_orders";
     
     @Autowired
-//    @Qualifier("create")
     private KafkaTemplate<String, List<OrderEntity>> createKafkaTemplate;
     
     @Autowired
-//    @Qualifier("cancel")
     private KafkaTemplate<String, List<Long>> cancelKafkaTemplate;
     
     public void createOrders(List<OrderEntity> orders) {
